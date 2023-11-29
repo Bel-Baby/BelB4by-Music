@@ -11,11 +11,11 @@
 </head>
 
 <body>
-    <main class="h-screen overflow-hidden">
+    <main class="h-screen sm:overflow-hidden overflow-scroll no-scrollbar">
         <section class="bg-black">
-            <div class="grid grid-cols-3 gap-3 pt-2 px-2">
+            <div class="sm:grid sm:grid-cols-3 gap-3 sm:pt-2 sm:px-2">
                 <!--first column Start-->
-                <div class="col-span-1">
+                <div class="sm:col-span-1 hidden sm:block">
                     <!--first column, first row Start-->
                     <div class="bg-neutral-900 bg-opacity-80 text-white rounded px-7 py-4 mb-2">
                         <div class="mb-6">
@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         <div class="flex gap-x-4 mt-5 px-5"><!--Liked Songs Start-->
-                            <div class="px-4 pt-4 h-14 bg-blue-700 rounded-lg">
+                            <div class="px-4 pt-4 h-14 bg-gradient-to-br from-violet-700 to-slate-200 rounded-lg">
                                 <i class="fa-solid fa-heart text-lg text-white"></i>
                             </div>
                             <div>
@@ -132,7 +132,7 @@
                 <!--Second column Start-->
                 <div class="col-span-2">
                     <div class="bg-gradient-to-b from-purple-950 from-10% to-neutral-900 to-50% rounded-lg h-2/5 overflow-scroll no-scrollbar">
-                        <div class="flex justify-between sticky top-0 left-0 right-0 z-10 bg-purple-950 px-5 py-5"><!--Sticky top Start-->
+                        <div class="sm:block hidden md:flex justify-between sticky top-0 left-0 right-0 z-10 bg-purple-950 px-5 py-5"><!--Sticky top Start-->
                             <div class="">
                                 <span class="bg-neutral-900 opacity-80 rounded-full px-2 py-1 mr-3 text-slate-300">
                                     <i class="fa-solid fa-chevron-left"></i>
@@ -152,167 +152,353 @@
                                 </span>
                             </div>
                         </div><!--Sticky Top End-->
-                        <h1 class="text-3xl font-bold text-white mt-5 px-5">Good evening</h1>
-                        <div class="grid grid-rows-2 gap-2 mt-5 px-5"><!--Grid Playlists start-->
-                            <div class="grid grid-cols-3 gap-2">
-                                <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
-                                    <div class="px-4 py-2 bg-blue-700">
-                                        <i class="fa-solid fa-heart text-lg text-white"></i>
+                        <h1 class="hidden sm:block text-3xl font-bold text-white mt-5 px-5">Good evening</h1>
+                        <div class="sm:hidden flex justify-between"><!--Mobile V St-->
+                            <h1 class="text-3xl font-bold text-white px-2 pt-5">Good evening</h1>
+                            <div class="flex gap-x-3 text-white px-2 pt-5">
+                                <svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 kPpCsU t93PZphItuM19kPhX7tC w-5 fill-white" viewBox="0 0 16 16"><path d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z"></path></svg>
+                                <i class="fa-solid fa-clock-rotate-left pt-2"></i>
+                                <i class="fa-solid fa-gear pt-2"></i>
+                            </div>
+                        </div>
+                        <div class="sm:hidden flex mt-5 gap-x-2 px-2 text-white text-sm">
+                            <span class="px-3 py-1 bg-neutral-600 rounded-3xl">Music</span>
+                            <span class="px-3 py-1 bg-neutral-600 rounded-3xl">Podcasts</span>
+                        </div><!--Mobile V Ed-->
+                        <div class="hidden sm:block mt-5 px-5"><!--Grid Playlists Start-->
+                            <div class="grid grid-rows-2 gap-2">
+                                <div class="grid grid-cols-3 gap-2">
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div class="px-4 py-2 bg-gradient-to-br from-violet-700 to-slate-200">
+                                            <i class="fa-solid fa-heart text-lg text-white"></i>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Liked Songs</p>
                                     </div>
-                                    <p class="text-sm text-white font-semibold">Liked Songs</p>
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/BlackSherif.jpeg" alt="Released" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Release Radar</p>
+                                    </div>
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/BNXN.jpeg" alt="Sincerely, Benson" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Sincerely, Benson</p>
+                                    </div>
                                 </div>
-                                <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
-                                    <div>
-                                        <img src="./Images/BlackSherif.jpeg" alt="Released" class="h-10"/>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/Judikay.jpeg" alt="New Music Friday Christian" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">New Music Friday Christian</p>
                                     </div>
-                                    <p class="text-sm text-white font-semibold">Release Radar</p>
-                                </div>
-                                <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
-                                    <div>
-                                        <img src="./Images/BNXN.jpeg" alt="Sincerely, Benson" class="h-10"/>
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/ChiomaJesus.jpg" alt="Chioma Jesus" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Chioma Jesus</p>
                                     </div>
-                                    <p class="text-sm text-white font-semibold">Sincerely, Benson</p>
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/AyraStarr.jpeg" alt="Ayra Starr" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Ayra Starr</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="grid grid-cols-3 gap-2">
-                                <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
-                                    <div>
-                                        <img src="./Images/Judikay.jpeg" alt="New Music Friday Christian" class="h-10"/>
+                        </div><!--Grid Playlists End-->
+                        <div class="sm:hidden px-2 mt-4"><!--Grid Mobile Playlists start-->
+                            <div class="grid grid-rows-3 gap-2">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div class="px-4 py-2 bg-gradient-to-br from-violet-700 to-slate-200">
+                                            <i class="fa-solid fa-heart text-lg text-white"></i>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Liked Songs</p>
                                     </div>
-                                    <p class="text-sm text-white font-semibold">New Music Friday Christian</p>
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/BlackSherif.jpeg" alt="Released" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Release Radar</p>
+                                    </div>
                                 </div>
-                                <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
-                                    <div>
-                                        <img src="./Images/ChiomaJesus.jpg" alt="Chioma Jesus" class="h-10"/>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/Judikay.jpeg" alt="New Music Friday Christian" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">New Music Friday Christian</p>
                                     </div>
-                                    <p class="text-sm text-white font-semibold">Chioma Jesus</p>
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/BNXN.jpeg" alt="Sincerely, Benson" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Sincerely, Benson</p>
+                                    </div>
                                 </div>
-                                <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
-                                    <div>
-                                        <img src="./Images/AyraStarr.jpeg" alt="Ayra Starr" class="h-10"/>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/ChiomaJesus.jpg" alt="Chioma Jesus" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Chioma Jesus</p>
                                     </div>
-                                    <p class="text-sm text-white font-semibold">Ayra Starr</p>
+                                    <div class="flex place-items-center gap-x-2 bg-neutral-500 opacity-60 rounded-lg">
+                                        <div>
+                                            <img src="./Images/AyraStarr.jpeg" alt="Ayra Starr" class="h-10"/>
+                                        </div>
+                                        <p class="text-sm text-white font-semibold">Ayra Starr</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div><!--Grid Playlists end-->
-                        <div class="flex justify-between mt-5 px-5"><!--Top mixes Start-->
+                        </div><!--Grid Mobile Playlists end-->
+                        <div class="flex justify-between sm:mt-5 mt-4 sm:px-5 px-2"><!--Top mixes Start-->
                             <h1 class="text-2xl font-bold text-white">Your top mixes</h1>
                             <p class="text-sm font-semibold text-slate-300">Show all</p>
                         </div>
-                        <div class="grid grid-cols-4 gap-4 mt-5 px-5">
-                            <div class="p-2 bg-neutral-900 rounded-lg">
-                                <div class="relative">
-                                    <img src="./Images/Khaid.jpeg" alt="Khaid" class="h-40 w-full rounded-lg"/>
-                                    <h1 class="font-semibold text-white absolute bottom-5 left-3">Khaid Mix</h1>
+                        <div class="hidden sm:block mt-5 px-5">
+                            <div class="grid grid-cols-4 gap-4">
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div class="relative">
+                                        <img src="./Images/Khaid.jpeg" alt="Khaid" class="h-40 w-full rounded-lg"/>
+                                        <h1 class="font-semibold text-white absolute bottom-5 left-3">Khaid Mix</h1>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">Khaid Mix</span>
+                                    <span class="text-sm text-slate-300 font-semibold">Black Sherif, Young Jonn and T DOLLAR</span>
                                 </div>
-                                <span class="mt-3 text-lg text-white font-bold block">Khaid Mix</span>
-                                <span class="text-sm text-slate-300 font-semibold">Black Sherif, Young Jonn and T DOLLAR</span>
-                            </div>
-                            <div class="p-2 bg-neutral-900 rounded-lg">
-                                <div class="relative">
-                                    <img src="./Images/YoungJonn.jpeg" alt="Young Jonn" class="h-40 w-full rounded-lg"/>
-                                    <h1 class="font-semibold text-white absolute bottom-5 left-3">Young Jonn Mix</h1>
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div class="relative">
+                                        <img src="./Images/YoungJonn.jpeg" alt="Young Jonn" class="h-40 w-full rounded-lg"/>
+                                        <h1 class="font-semibold text-white absolute bottom-5 left-3">Young Jonn Mix</h1>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">Young Jonn Mix</span>
+                                    <span class="text-sm text-slate-300 font-semibold">Khaid, BNXN and ODUMODUBLVCK</span>
                                 </div>
-                                <span class="mt-3 text-lg text-white font-bold block">Young Jonn Mix</span>
-                                <span class="text-sm text-slate-300 font-semibold">Khaid, BNXN and ODUMODUBLVCK</span>
-                            </div>
-                            <div class="p-2 bg-neutral-900 rounded-lg">
-                                <div class="relative">
-                                    <img src="./Images/DuncanMighty.jpeg" alt="90's mix" class="h-40 w-full rounded-lg"/>
-                                    <h1 class="font-semibold text-white absolute bottom-5 left-3">90s Mix</h1>
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div class="relative">
+                                        <img src="./Images/DuncanMighty.jpeg" alt="90's mix" class="h-40 w-full rounded-lg"/>
+                                        <h1 class="font-semibold text-white absolute bottom-5 left-3">90s Mix</h1>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">90s Mix</span>
+                                    <span class="text-sm text-slate-300 font-semibold">Slow Dog, Timaya, Flavor and P-Square</span>
                                 </div>
-                                <span class="mt-3 text-lg text-white font-bold block">90s Mix</span>
-                                <span class="text-sm text-slate-300 font-semibold">Slow Dog, Timaya, Flavor and P-Square</span>
-                            </div>
-                            <div class="p-2 bg-neutral-900 rounded-lg">
-                                <div class="relative">
-                                    <img src="./Images/Simi.jpeg" alt="Simi" class="h-40 w-full rounded-lg"/>
-                                    <h1 class="font-semibold text-white absolute bottom-5 left-3">Simi Mix</h1>
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div class="relative">
+                                        <img src="./Images/Simi.jpeg" alt="Simi" class="h-40 w-full rounded-lg"/>
+                                        <h1 class="font-semibold text-white absolute bottom-5 left-3">Simi Mix</h1>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">Simi Mix</span>
+                                    <span class="text-sm text-slate-300 font-semibold">Adekunle Gold, Seyi Vibez and Bella Shmurda</span>
                                 </div>
-                                <span class="mt-3 text-lg text-white font-bold block">Simi Mix</span>
-                                <span class="text-sm text-slate-300 font-semibold">Adekunle Gold, Seyi Vibez and Bella Shmurda</span>
                             </div>
                         </div><!--Top mixes end-->
+                        <div class="sm:hidden mt-4 px-2 flex gap-x-3 w-screen overflow-scroll no-scrollbar"><!--Top mixes mobile start-->
+                            <div class="p-2 bg-neutral-900 min-w-fit h-fit rounded-lg">
+                                <div class="relative">
+                                    <img src="./Images/Khaid.jpeg" alt="Khaid" class="h-40 rounded-lg"/>
+                                    <h1 class="font-semibold text-white absolute bottom-1 left-1">Khaid Mix</h1>
+                                </div>
+                                <span class="mt-3 text-lg text-white font-bold block">Khaid Mix</span>
+                                <span class="text-sm text-slate-300 font-semibold">Black Sherif, Young Jonn <p>and T DOLLAR</p></span>
+                            </div>
+                            <div class="p-2 bg-neutral-900 min-w-fit h-fit rounded-lg">
+                                <div class="relative">
+                                    <img src="./Images/YoungJonn.jpeg" alt="Young Jonn" class="h-40 rounded-lg"/>
+                                    <h1 class="font-semibold text-white absolute bottom-1 left-1">Young Jonn Mix</h1>
+                                </div>
+                                <span class="mt-3 text-lg text-white font-bold block">Young Jonn Mix</span>
+                                <span class="text-sm text-slate-300 font-semibold">Khaid, BNXN and <p>ODUMODUBLVCK</p></span>
+                            </div>
+                            <div class="p-2 bg-neutral-900 min-w-fit h-fit rounded-lg">
+                                <div class="relative">
+                                    <img src="./Images/DuncanMighty.jpeg" alt="90's mix" class="h-40 rounded-lg"/>
+                                    <h1 class="font-semibold text-white absolute bottom-1 left-1">90s Mix</h1>
+                                </div>
+                                <span class="mt-3 text-lg text-white font-bold block">90s Mix</span>
+                                <span class="text-sm text-slate-300 font-semibold">Slow Dog, Timaya,<p>Flavor and P-Square</p></span>
+                            </div>
+                            <div class="p-2 bg-neutral-900 min-w-fit h-fit rounded-lg">
+                                <div class="relative">
+                                    <img src="./Images/Simi.jpeg" alt="Simi" class="h-40 rounded-lg"/>
+                                    <h1 class="font-semibold text-white absolute bottom-1 left-1">Simi Mix</h1>
+                                </div>
+                                <span class="mt-3 text-lg text-white font-bold block">Simi Mix</span>
+                                <span class="text-sm text-slate-300 font-semibold">Adekunle Gold,<p>Seyi Vibez and</p><p>Bella Shmurda</p></span>
+                            </div>
+                        </div><!--Top mixes mobile end-->
                         <div class="flex justify-between mt-5 px-5"><!--Popular new releases Start-->
                             <h1 class="text-2xl font-bold text-white">Popular new releases</h1>
                             <p class="text-sm font-semibold text-slate-300">Show all</p>
                         </div>
-                        <div class="grid grid-cols-4 gap-4 mt-5 px-5">
-                            <div class="p-2 bg-neutral-900 rounded-lg">
+                        <div class="hidden sm:block mt-5 px-5">
+                            <div class="grid grid-cols-4 gap-4 mt-5 px-5">
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div>
+                                        <img src="./Images/KojoCue.jpeg" alt="Ko-JoCue" class="h-40 w-full rounded-lg"/>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">I'm Back</span>
+                                    <span class="text-sm text-slate-300 font-semibold">Ko-Jo Cue</span>
+                                </div>
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div>
+                                        <img src="./Images/CruelSantino.jpeg" alt="Cruel Santino
+                                        " class="h-40 w-full rounded-lg"/>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">Cincinnati Pumpin!!</span>
+                                    <span class="text-sm text-slate-300 font-semibold">Cruel Santino
+                                    </span>
+                                </div>
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div>
+                                        <img src="./Images/TravisScott.jpeg" alt="Travis Scott" class="h-40 w-full rounded-lg"/>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">Water(Remix)</span>
+                                    <span class="text-sm text-slate-300 font-semibold">Tyla, Travis Scott</span>
+                                </div>
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div>
+                                        <img src="./Images/Joeboy1.jpeg" alt="Simi" class="h-40 w-full rounded-lg"/>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">Body, Soul & Spirit</span>
+                                    <span class="text-sm text-slate-300 font-semibold">Joeboy</span>
+                                </div>
+                            </div>
+                        </div><!--Popular new releases end-->
+                        <div class="sm:hidden mt-4 px-2 flex gap-x-3 w-screen overflow-scroll no-scrollbar"><!--Popular new releases mobile view start-->
+                            <div class="p-2 bg-neutral-900 rounded-lg min-w-fit h-fit">
                                 <div>
-                                    <img src="./Images/KojoCue.jpeg" alt="Ko-JoCue" class="h-40 w-full rounded-lg"/>
+                                    <img src="./Images/KojoCue.jpeg" alt="Ko-JoCue" class="h-40 rounded-lg"/>
                                 </div>
                                 <span class="mt-3 text-lg text-white font-bold block">I'm Back</span>
                                 <span class="text-sm text-slate-300 font-semibold">Ko-Jo Cue</span>
                             </div>
-                            <div class="p-2 bg-neutral-900 rounded-lg">
+                            <div class="p-2 bg-neutral-900 rounded-lg min-w-fit h-fit">
                                 <div>
                                     <img src="./Images/CruelSantino.jpeg" alt="Cruel Santino
-                                    " class="h-40 w-full rounded-lg"/>
+                                    " class="h-40 rounded-lg"/>
                                 </div>
                                 <span class="mt-3 text-lg text-white font-bold block">Cincinnati Pumpin!!</span>
                                 <span class="text-sm text-slate-300 font-semibold">Cruel Santino
                                 </span>
                             </div>
-                            <div class="p-2 bg-neutral-900 rounded-lg">
+                            <div class="p-2 bg-neutral-900 rounded-lg min-w-fit h-fit">
                                 <div>
-                                    <img src="./Images/TravisScott.jpeg" alt="Travis Scott" class="h-40 w-full rounded-lg"/>
+                                    <img src="./Images/TravisScott.jpeg" alt="Travis Scott" class="h-40 rounded-lg"/>
                                 </div>
                                 <span class="mt-3 text-lg text-white font-bold block">Water(Remix)</span>
                                 <span class="text-sm text-slate-300 font-semibold">Tyla, Travis Scott</span>
                             </div>
-                            <div class="p-2 bg-neutral-900 rounded-lg">
+                            <div class="p-2 bg-neutral-900 rounded-lg min-w-fit h-fit">
                                 <div>
-                                    <img src="./Images/Joeboy1.jpeg" alt="Simi" class="h-40 w-full rounded-lg"/>
+                                    <img src="./Images/Joeboy1.jpeg" alt="Simi" class="h-40 rounded-lg"/>
                                 </div>
                                 <span class="mt-3 text-lg text-white font-bold block">Body, Soul & Spirit</span>
                                 <span class="text-sm text-slate-300 font-semibold">Joeboy</span>
                             </div>
-                        </div><!--Popular new releases end-->
+                        </div><!--Popular new releases mobile view end-->
                         <div class="flex justify-between mt-5 px-5"><!--Recently played Start-->
                             <h1 class="text-2xl font-bold text-white">Recently played</h1>
                             <p class="text-sm font-semibold text-slate-300">Show all</p>
                         </div>
-                        <div class="grid grid-cols-4 gap-4 mt-5 px-5">
-                            <div class="p-2 bg-neutral-900 rounded-lg">
-                                <div class="flex justify-center place-items-center h-40 bg-blue-700 rounded-lg">
+                        <div class="hidden sm:block mt-5 px-5">
+                            <div class="grid grid-cols-4 gap-4">
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div class="flex justify-center place-items-center h-40 bg-gradient-to-br from-violet-700 to-slate-200 rounded-lg">
+                                        <i class="fa-solid fa-heart text-6xl text-white"></i>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">Liked Songs</span>
+                                    <span class="text-sm text-slate-300 font-semibold">80 songs</span>
+                                </div>
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div>
+                                        <img src="./Images/BNXN1.jpeg" alt="Sincerely, Benson
+                                        " class="h-40 w-full rounded-lg"/>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">Sincerely, Benson</span>
+                                    <span class="text-sm text-slate-300 font-semibold">BNXN
+                                    </span>
+                                </div>
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div class="relative">
+                                        <img src="./Images/OdumoduBlvck.jpeg" alt="Release Radar" class="h-40 w-full rounded-lg"/>
+                                        <h1 class="absolute bottom-5 left-3 text-lg text-white font-bold">Release Radar</h1>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">Release Radar</span>
+                                    <span class="text-sm text-slate-300 font-semibold">Catch all the latest music from artists you follow,...</span>
+                                </div>
+                                <div class="p-2 bg-neutral-900 rounded-lg">
+                                    <div class="relative">
+                                        <img src="./Images/PrinxEmmanuel.jpeg" alt="New Music Friday Christian" class="h-40 w-full rounded-lg"/>
+                                        <h1 class="absolute bottom-5 left-3 text-lg text-white font-bold">New Music Friday Christian</h1>
+                                    </div>
+                                    <span class="mt-3 text-lg text-white font-bold block">New Music Friday C...</span>
+                                    <span class="text-sm text-slate-300 font-semibold">The best new tracks of all genres of Christian,...</span>
+                                </div>
+                            </div>
+                        </div><!--Recently played end-->
+                        <div class="sm:hidden mt-4 mb-20 px-2 flex gap-x-3 w-screen overflow-scroll no-scrollbar"><!--Recently played mobile start-->
+                            <div class="p-2 bg-neutral-900 rounded-lg min-w-fit h-fit">
+                                <div class="flex justify-center place-items-center h-40 w-40 bg-gradient-to-br from-violet-700 to-slate-200 rounded-lg">
                                     <i class="fa-solid fa-heart text-6xl text-white"></i>
                                 </div>
                                 <span class="mt-3 text-lg text-white font-bold block">Liked Songs</span>
                                 <span class="text-sm text-slate-300 font-semibold">80 songs</span>
                             </div>
-                            <div class="p-2 bg-neutral-900 rounded-lg">
+                            <div class="p-2 bg-neutral-900 rounded-lg min-w-fit h-fit">
                                 <div>
                                     <img src="./Images/BNXN1.jpeg" alt="Sincerely, Benson
-                                    " class="h-40 w-full rounded-lg"/>
+                                    " class="h-40 rounded-lg"/>
                                 </div>
                                 <span class="mt-3 text-lg text-white font-bold block">Sincerely, Benson</span>
                                 <span class="text-sm text-slate-300 font-semibold">BNXN
                                 </span>
                             </div>
-                            <div class="p-2 bg-neutral-900 rounded-lg">
+                            <div class="p-2 bg-neutral-900 rounded-lg min-w-fit h-fit">
                                 <div class="relative">
-                                    <img src="./Images/OdumoduBlvck.jpeg" alt="Release Radar" class="h-40 w-full rounded-lg"/>
-                                    <h1 class="absolute bottom-5 left-3 text-lg text-white font-bold">Release Radar</h1>
+                                    <img src="./Images/OdumoduBlvck.jpeg" alt="Release Radar" class="h-40 rounded-lg"/>
+                                    <h1 class="absolute bottom-1 left-1 text-lg text-white font-bold">Release Radar</h1>
                                 </div>
                                 <span class="mt-3 text-lg text-white font-bold block">Release Radar</span>
-                                <span class="text-sm text-slate-300 font-semibold">Catch all the latest music from artists you follow,...</span>
+                                <span class="text-sm text-slate-300 font-semibold">Catch all the latest music <p>from artists you follow,...</p></span>
                             </div>
-                            <div class="p-2 bg-neutral-900 rounded-lg">
+                            <div class="p-2 bg-neutral-900 rounded-lg min-w-fit h-fit">
                                 <div class="relative">
-                                    <img src="./Images/PrinxEmmanuel.jpeg" alt="New Music Friday Christian" class="h-40 w-full rounded-lg"/>
-                                    <h1 class="absolute bottom-5 left-3 text-lg text-white font-bold">New Music Friday Christian</h1>
+                                    <img src="./Images/PrinxEmmanuel.jpeg" alt="New Music Friday Christian" class="h-40 w-40 rounded-lg"/>
+                                    <h1 class="absolute bottom-1 left-1 text-lg text-white font-bold">New Music<p>Friday Christian</p></h1>
                                 </div>
-                                <span class="mt-3 text-lg text-white font-bold block">New Music Friday C...</span>
-                                <span class="text-sm text-slate-300 font-semibold">The best new tracks of all genres of Christian,...</span>
+                                <span class="mt-3 text-lg text-white font-bold block">New Music<p>Friday C...</p></span>
+                                <span class="text-sm text-slate-300 font-semibold">The best new tracks of <p>all genres of Christian,...</p></span>
                             </div>
-                        </div><!--Recently played end-->
+                        </div><!--Recently played mobile end-->
+                        <section class="sm:hidden bg-neutral-900 opacity-50 fixed bottom-0 left-0 right-0 px-4 py-5">
+                            <div class="flex justify-between text-slate-400">
+                                <div class="text-white">
+                                    <i class="fa-solid fa-house text-xl pl-3"></i>
+                                    <p>Home</p>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-magnifying-glass text-xl pl-3"></i>
+                                    <p>Search</p>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-map text-xl pl-7"></i>
+                                    <p>Your Library</p>
+                                </div>
+                                <div class="text-slate-800">
+                                    <i class="fa-brands fa-spotify text-xl pl-5"></i>
+                                    <p class="text-slate-400">Premium</p>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
                 <!--Second column End-->
             </div>
         </section>
-        <section class="fixed bottom-0 right-0 left-0">
+        <section class="hidden sm:block fixed bottom-0 right-0 left-0">
             <div class="grid grid-cols-3 gap-x-5 px-4 py-1 bg-black">
                 <div class="flex place-items-center gap-x-5">
                     <img src="./Images/HolyGhost.jpeg" alt="Holy Ghost cover" class="w-14 rounded-lg"/>
